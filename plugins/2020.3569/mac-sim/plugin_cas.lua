@@ -3,7 +3,7 @@
 local Library = require "CoronaLibrary"
 
 -- Create library
-local lib = Library:new{ name="plugin.cas", publisherId="com.cleveradssolution", version=1 }
+local lib = Library:new{ name="plugin.cas", publisherId="com.cleveradssolution", version=3 }
 
 -------------------------------------------------------------------------------
 -- BEGIN
@@ -28,7 +28,7 @@ function lib.validateIntegration()
 end
 
 function lib.setDebugMode()
-    showWarning("cas.init()")
+    showWarning("cas.debugMode()")
 end
 
 function lib.isAdReady()
