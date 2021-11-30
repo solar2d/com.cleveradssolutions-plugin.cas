@@ -78,7 +78,7 @@ settings =
 
 `⚠️ [own_id] is not an identifier of the manager. You enter a manager ID to download settings file.`
 
-3. (If you use AdMob) Add AdMob App ID to your app's AndroidManifest.xml file by adding a <meta-data> tag with name com.google.android.gms.ads.APPLICATION_ID to your build.settings file, as shown below.
+2. (If you use AdMob) Add AdMob App ID to your app's AndroidManifest.xml file by adding a <meta-data> tag with name com.google.android.gms.ads.APPLICATION_ID to your build.settings file, as shown below.
 For android:value insert AdMob App ID in quotes, as shown below.
 
 ``````lua
