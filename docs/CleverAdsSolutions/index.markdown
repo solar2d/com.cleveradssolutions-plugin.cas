@@ -94,7 +94,6 @@ android =
 		minSdkVersion = "19",
 	},
 
-</div>
 ``````
 
 <div class="guide-notebox">
