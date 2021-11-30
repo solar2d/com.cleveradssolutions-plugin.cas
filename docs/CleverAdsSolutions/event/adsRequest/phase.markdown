@@ -2,27 +2,28 @@
 
 > --------------------- ------------------------------------------------------------------------------------------
 > __Type__              [String][api.type.String]
-> __Event__             [adsRequest][plugin.unityads.event.adsRequest]
-> __Revision__          [REVISION_LABEL](REVISION_URL)
-> __Keywords__          ads, advertising, Unity Ads, adsRequest, phase
-> __See also__			[adsRequest][plugin.unityads.event.adsRequest]
->						[unityads.*][plugin.unityads]
+> __Event__             [adsRequest][plugin.cas.event.adsRequest]
+> __Keywords__          ads, advertising, Clever Ads Solutions, CAS, adsRequest, phase
+> __See also__			[adsRequest][plugin.cas.event.adsRequest]
+>						[cas.*][plugin.cas]
 > --------------------- ------------------------------------------------------------------------------------------
 
 ## Overview
 
-[String][api.type.String] value indicating the phase of the [adsRequest][plugin.unityads.event.adsRequest] event. Possible values include:
+[String][api.type.String] value indicating the phase of the [adsRequest][plugin.cas.event.adsRequest] event. Possible values include:
 
-* `"init"` &mdash; Indicates that the Unity&nbsp;Ads plugin was initialized successfully. You must wait for this event phase before trying to show ads.
+* `"init"` &mdash; Indicates that the Clever Ads Solutions SDK was initialized successfully.
 
-* `"loaded"` &mdash; Indicates that an ad has been loaded successfully.
+* `"adFailedToLoad"` &mdash; Indicates that an ad failed to load. For this phase, [event.isError][plugin.cas.event.adsRequest.isError] will be `true`. Additionally, [event.adType][plugin.cas.event.adsRequest.adType], and [event.response][plugin.cas.event.adsRequest.response] can provide additional context.
 
-* `"displayed"` &mdash; Indicates that an ad has been displayed successfully via [unityads.show()][plugin.unityads.show].
+* `"shown"` &mdash; Indicates that an ad shown successfully. For this phase, [event.adType][plugin.cas.event.adsRequest.adType] can provide additional context.
 
-* `"skipped"` &mdash; Indicates that video ad playback was stopped by the user before the end of playback.
+* `"showFailed"` &mdash; Indicates that an ad failed to show. For this phase, [event.isError][plugin.cas.event.adsRequest.isError] will be `true`. Additionally, [event.adType][plugin.cas.event.adsRequest.adType], and [event.response][plugin.cas.event.adsRequest.response] can provide additional context.
 
-* `"completed"` &mdash; Indicates that the user viewed the video ad until its completion.
- 
-* `"failed"` &mdash; Indicates that an ad failed to load. For this phase, [event.isError][plugin.unityads.event.adsRequest.isError] will be `true` and [event.response][plugin.unityads.event.adsRequest.response] provides additional context on the error. Additionally, for this phase, [event.data][plugin.unityads.event.adsRequest.data] is a <nobr>JSON-formatted</nobr> string containing `errorCode` and `errorMsg` keys.
+* `"loaded"` &mdash; Indicates that an ad loaded successfully. For this phase, [event.adType][plugin.cas.event.adsRequest.adType] can provide additional context.
 
-* `"placementStatus"` &mdash; This phase is triggered by a call to [unityads.isLoaded()][plugin.unityads.isLoaded]. In this case, [event.data][plugin.unityads.event.adsRequest.data] will contain status information about the placement&nbsp;ID.
+* `"clicked"` &mdash; Indicates that an ad was clicked/tapped. For this phase, [event.adType][plugin.cas.event.adsRequest.adType] can provide additional context.
+
+* `"closed"` &mdash; Indicates that an ad was closed. For this phase, [event.adType][plugin.cas.event.adsRequest.adType] can provide additional context.
+
+* `"completed"` &mdash; Indicates that a rewarded video ad has been viewed to its completion and that a reward should be given. For this phase, [event.adType][plugin.cas.event.adsRequest.adType] can provide additional context.

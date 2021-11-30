@@ -3,8 +3,7 @@
 > --------------------- ------------------------------------------------------------------------------------------
 > __Type__              [Function][api.type.Function]
 > __Return value__      [Boolean][api.type.Boolean]
-> __Revision__          [REVISION_LABEL](REVISION_URL)
-> __Keywords__          ads, advertising, CleverAdsSolutions Ads, isLoaded
+> __Keywords__          ads, advertising, Clever Ads Solutions, CAS, isAdReady
 > __See also__          [cas.*][plugin.cas]
 > --------------------- ------------------------------------------------------------------------------------------
 
@@ -18,7 +17,7 @@ Returns a [boolean][api.type.Boolean] indicating whether an ad is loaded and rea
     cas.isAdReady( adType )
 
 ##### adType ~^(required)^~
-_[Number][api.type.Number]._ Ad Type of your ad(0 - Banner, 1 - Interstitial, 2 - Rewarded).
+_[Number][api.type.Number]._ Ad Type of your ad `(0 - Banner, 1 - Interstitial, 2 - Rewarded)`.
 
 
 ## Example
@@ -35,7 +34,7 @@ local function adListener( event )
 end
 
 -- Initialize the CAS plugin
-cas.init( adListener, { gameId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=true, appReturn=false } )
+cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=true, appReturn=false } )
 
 -- Sometime later, check if an banner ad is ready for display
 print( cas.isAdReady( 0 ) )

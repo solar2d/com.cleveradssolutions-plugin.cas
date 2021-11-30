@@ -3,8 +3,7 @@
 > --------------------- ------------------------------------------------------------------------------------------
 > __Type__              [Function][api.type.Function]
 > __Return value__      none
-> __Revision__          [REVISION_LABEL](REVISION_URL)
-> __Keywords__          ads, advertising, CleverAdsSolutions Ads, show
+> __Keywords__          ads, advertising, Clever Ads Solutions, CAS, setBannerSize
 > __See also__          [cas.showBanner()][plugin.cas.isAdReady]
 >						[cas.*][plugin.cas]
 > --------------------- ------------------------------------------------------------------------------------------
@@ -17,7 +16,7 @@ Set banner size.
 <div class="guide-notebox">
 <div class="notebox-title">Note</div>
 
-Once you initialize the plugin with [cas.init()][cas.cas.init], CAS&nbsp; will automatically start loading ads. You can set Banner Size or change Banner Position before showing a banner.
+Once you initialize the plugin with [cas.init()][cas.cas.init], `CAS SDK` will automatically start loading ads. You can set Banner Size or change Banner Position before showing a banner.
 
 </div>
 
@@ -27,7 +26,7 @@ Once you initialize the plugin with [cas.init()][cas.cas.init], CAS&nbsp; will a
     cas.setBannerSize(bannerSizeId)
 
 ##### bannerSizeId ~^(required)^~
-_[Number][api.type.Number]._ The size banner id. 1 - Banner, 2 - Adaptive Banner, 3 - Smart Banner, 4 - LeaderBoard Banner, 5 - Medium Rectangle Banner
+_[Number][api.type.Number]._ The size banner id `(1 - Banner, 2 - Adaptive Banner, 3 - Smart Banner, 4 - LeaderBoard Banner, 5 - Medium Rectangle Banner)`.
 
 ## Example
 
@@ -43,7 +42,7 @@ local function adListener( event )
 end
 
 -- Initialize the CAS plugin
-cas.init( adListener, { gameId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=true, appReturn=false } )
+cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=false, appReturn=false } )
 
 -- Set banner size
 cas.setBannerSize(1)

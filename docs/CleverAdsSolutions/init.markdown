@@ -3,8 +3,7 @@
 > --------------------- ------------------------------------------------------------------------------------------
 > __Type__              [Function][api.type.Function]
 > __Return value__      none
-> __Revision__          [REVISION_LABEL](REVISION_URL)
-> __Keywords__          ads, advertising, ClevelAdsSolutions Ads, init
+> __Keywords__          ads, advertising, Clevel Ads Solutions, CAS, init
 > __See also__          [cas.*][plugin.cas]
 > --------------------- ------------------------------------------------------------------------------------------
 
@@ -62,5 +61,5 @@ local function adListener( event )
 end
 
 -- Initialize the CAS plugin
-cas.init( adListener, { gameId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=true, appReturn=false } )
+cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=true, appReturn=false } )
 ``````

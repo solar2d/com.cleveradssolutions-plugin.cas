@@ -1,24 +1,23 @@
-# cas.setDebugMode()
+# cas.validateIntegration()
 
 > --------------------- ------------------------------------------------------------------------------------------
 > __Type__              [Function][api.type.Function]
 > __Return value__      none
-> __Revision__          [REVISION_LABEL](REVISION_URL)
-> __Keywords__          ads, advertising, CleverAdsSolutions Ads, show
-> __See also__          [cas.setDebugMode()][plugin.cas.setDebugMode]
+> __Keywords__          ads, advertising, Clever Ads Solutions, CAS, validateIntegration
+> __See also__          [cas.validateIntegration()][plugin.cas.validateIntegration]
 >						[cas.*][plugin.cas]
 > --------------------- ------------------------------------------------------------------------------------------
 
 
 ## Overview
 
-Set banner position.
+Validate integration.
 
 <div class="guide-notebox">
 <div class="notebox-title">Note</div>
 
-The CAS SDK provides an easy way to verify that you’ve successfully integrated any additional adapters; it also makes sure all required dependencies and frameworks were added for the various mediated ad networks.
-After you have finished your integration, call the following static method and confirm that all networks you have implemented are marked as VERIFIED
+The `CAS SDK` provides an easy way to verify that you’ve successfully integrated any additional adapters; it also makes sure all required dependencies and frameworks were added for the various mediated ad networks.
+After you have finished your integration, call the following method and confirm that all networks you have implemented are marked as VERIFIED
 
 </div>
 
