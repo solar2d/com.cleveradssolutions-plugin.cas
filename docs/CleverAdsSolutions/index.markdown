@@ -31,7 +31,11 @@ Before you can use this plugin, you must [register](https://cleveradssolutions.c
 
 #### [cas.setDebugMode()][plugin.cas.setDebugMode]
 
-#### [cas.isAdReady()][plugin.cas.isAdReady]
+#### [cas.isBannerReady()][plugin.cas.isBannerReady]
+
+#### [cas.isInterstitialReady()][plugin.cas.isInterstitialReady]
+
+#### [cas.isRewardedReady()][plugin.cas.isRewardedReady]
 
 #### [cas.setBannerSize()][plugin.cas.setBannerSize]
 
@@ -78,7 +82,7 @@ settings =
 
 `⚠️ [own_id] is not an identifier of the manager. You enter a manager ID to download settings file.`
 
-3. (If you use AdMob) Add AdMob App ID to your app's AndroidManifest.xml file by adding a <meta-data> tag with name com.google.android.gms.ads.APPLICATION_ID to your build.settings file, as shown below.
+2. (If you use AdMob) Add AdMob App ID to your app's AndroidManifest.xml file by adding a <meta-data> tag with name com.google.android.gms.ads.APPLICATION_ID to your build.settings file, as shown below.
 For android:value insert AdMob App ID in quotes, as shown below.
 
 ``````lua
@@ -94,7 +98,6 @@ android =
 		minSdkVersion = "19",
 	},
 
-</div>
 ``````
 
 <div class="guide-notebox">
@@ -107,6 +110,7 @@ For Android, the following permissions/features are automatically added when usi
 
 Also, minimum Android API level required is 19
 
+</div>
 </div>
 
 

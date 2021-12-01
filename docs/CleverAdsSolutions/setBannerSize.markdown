@@ -4,7 +4,7 @@
 > __Type__              [Function][api.type.Function]
 > __Return value__      none
 > __Keywords__          ads, advertising, Clever Ads Solutions, CAS, setBannerSize
-> __See also__          [cas.showBanner()][plugin.cas.isAdReady]
+> __See also__          [cas.showBanner()][plugin.cas.showBanner]
 >						[cas.*][plugin.cas]
 > --------------------- ------------------------------------------------------------------------------------------
 
@@ -18,15 +18,32 @@ Set banner size.
 
 Once you initialize the plugin with [cas.init()][cas.cas.init], `CAS SDK` will automatically start loading ads. You can set Banner Size or change Banner Position before showing a banner.
 
-</div>
+## Ad Size
+| Size in dp (WxH) |      Description     |    Availability    | AdSize constant |
+|:----------------:|:--------------------:|:------------------:|:---------------:|
+|      320x50      |    Standard Banner   | Phones and Tablets |     `banner      |
+|      728x90      |    IAB Leaderboard   |       Tablets      |   leaderboard   |
+|      300x250     | IAB Medium Rectangle | Phones and Tablets |      mrec       |
 
+### Adaptive Banners
+Adaptive banners are the next generation of responsive ads, maximizing performance by optimizing ad size for each device.  
+To pick the best ad size, adaptive banners use fixed aspect ratios instead of fixed heights. This results in banner ads that occupy a more consistent portion of the screen across devices and provide opportunities for improved performance. [You can read more in this article.](https://developers.google.com/admob/android/banner/adaptive)
+
+####AdSize constant of adaptive banner is `adaptive`.
+
+### Smart Banners
+Typically, Smart Banners on phones have a Standard Banner size. Or on tablets an IAB Leaderboard size.
+
+####AdSize constant of smart banner is `smart`.
+
+</div>
 
 ## Syntax
 
-    cas.setBannerSize(bannerSizeId)
+    cas.setBannerSize(bannerSize)
 
-##### bannerSizeId ~^(required)^~
-_[Number][api.type.Number]._ The size banner id `(1 - Banner, 2 - Adaptive Banner, 3 - Smart Banner, 4 - LeaderBoard Banner, 5 - Medium Rectangle Banner)`.
+##### bannerSize ~^(required)^~
+_[String][api.type.String]._ The size of a banner: `"banner"`, `"adaptive"`, `"smart"`, `"leaderboard"` or `"mrec"`.
 
 ## Example
 
@@ -45,10 +62,10 @@ end
 cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=false, appReturn=false } )
 
 -- Set banner size
-cas.setBannerSize(1)
+cas.setBannerSize("adaptive")
 
 -- Sometime later, show an ad
-if ( cas.isAdReady( 0 ) ) then
+if ( cas.isBannerReady() ) then
 	cas.showBanner()
 end
 ``````

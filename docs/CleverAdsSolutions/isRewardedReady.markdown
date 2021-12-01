@@ -1,29 +1,20 @@
-# cas.showBanner()
+# cas.isRewardedReady()
 
 > --------------------- ------------------------------------------------------------------------------------------
 > __Type__              [Function][api.type.Function]
-> __Return value__      none
-> __Keywords__          ads, advertising, Clever Ads Solutions, CAS, showBanner
-> __See also__          [cas.isBannerReady()][plugin.cas.isBannerReady]
->						[cas.*][plugin.cas]
+> __Return value__      [Boolean][api.type.Boolean]
+> __Keywords__          ads, advertising, Clever Ads Solutions, CAS, isRewardedReady
+> __See also__          [cas.*][plugin.cas]
 > --------------------- ------------------------------------------------------------------------------------------
 
 
 ## Overview
 
-Shows a banner ad.
-
-<div class="guide-notebox">
-<div class="notebox-title">Note</div>
-
-Once you initialize the plugin with [cas.init()][cas.cas.init], `CAS SDK` will automatically start loading ads. 
-
-</div>
-
+Returns a [boolean][api.type.Boolean] indicating whether a rewarded ad is loaded and ready for display.
 
 ## Syntax
 
-    cas.showBanner()
+    cas.isRewardedReady()
 
 ## Example
 
@@ -41,8 +32,6 @@ end
 -- Initialize the CAS plugin
 cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=true, appReturn=false } )
 
--- Sometime later, show an ad
-if ( cas.isBannerReady() ) then
-	cas.showBanner()
-end
+-- Sometime later, check if an banner ad is ready for display
+print( cas.isRewardedReady() )
 ``````

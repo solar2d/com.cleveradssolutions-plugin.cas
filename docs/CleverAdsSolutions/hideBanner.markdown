@@ -1,24 +1,29 @@
-# cas.isAdReady()
+# cas.hideBanner()
 
 > --------------------- ------------------------------------------------------------------------------------------
 > __Type__              [Function][api.type.Function]
-> __Return value__      [Boolean][api.type.Boolean]
-> __Keywords__          ads, advertising, Clever Ads Solutions, CAS, isAdReady
-> __See also__          [cas.*][plugin.cas]
+> __Return value__      none
+> __Keywords__          ads, advertising, Clever Ads Solutions, CAS, hideBanner
+> __See also__          [cas.showBanner()][plugin.cas.showBanner]
+>						[cas.*][plugin.cas]
 > --------------------- ------------------------------------------------------------------------------------------
 
 
 ## Overview
 
-Returns a [boolean][api.type.Boolean] indicating whether an ad is loaded and ready for display.
+Hide a banner ad.
+
+<div class="guide-notebox">
+<div class="notebox-title">Note</div>
+
+Once you initialize the plugin with [cas.init()][cas.cas.init], `CAS SDK` will automatically start loading ads. 
+
+</div>
+
 
 ## Syntax
 
-    cas.isAdReady( adType )
-
-##### adType ~^(required)^~
-_[Number][api.type.Number]._ Ad Type of your ad `(0 - Banner, 1 - Interstitial, 2 - Rewarded)`.
-
+    cas.hideBanner()
 
 ## Example
 
@@ -35,7 +40,11 @@ end
 
 -- Initialize the CAS plugin
 cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=true, appReturn=false } )
+-- Sometime later, show an ad
+if ( cas.isAdReady( 0 ) ) then
+	cas.showBanner()
+end
 
--- Sometime later, check if an banner ad is ready for display
-print( cas.isAdReady( 0 ) )
+-- Sometime later, show an ad
+cas.hideBanner()
 ``````

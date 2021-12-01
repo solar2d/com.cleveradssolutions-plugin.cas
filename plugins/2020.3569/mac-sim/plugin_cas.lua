@@ -3,7 +3,7 @@
 local Library = require "CoronaLibrary"
 
 -- Create library
-local lib = Library:new{ name="plugin.cas", publisherId="com.cleveradssolution", version=3 }
+local lib = Library:new{ name="plugin.cas", publisherId="com.cleveradssolution", version=5 }
 
 -------------------------------------------------------------------------------
 -- BEGIN
@@ -31,8 +31,16 @@ function lib.setDebugMode()
     showWarning("cas.debugMode()")
 end
 
-function lib.isAdReady()
-    showWarning("cas.isAdReady()")
+function lib.isBannerReady()
+    showWarning("cas.isBannerReady()")
+end
+
+function lib.isInterstitialReady()
+    showWarning("cas.isInterstitialReady()")
+end
+
+function lib.isRewardedReady()
+    showWarning("cas.isRewardedReady()")
 end
 
 function lib.setBannerPosition()
