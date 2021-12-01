@@ -21,20 +21,20 @@ Once you initialize the plugin with [cas.init()][cas.cas.init], `CAS SDK` will a
 ## Ad Size
 | Size in dp (WxH) |      Description     |    Availability    | AdSize constant |
 |:----------------:|:--------------------:|:------------------:|:---------------:|
-|      320x50      |    Standard Banner   | Phones and Tablets |     `banner      |
+|      320x50      |    Standard Banner   | Phones and Tablets |     banner      |
 |      728x90      |    IAB Leaderboard   |       Tablets      |   leaderboard   |
 |      300x250     | IAB Medium Rectangle | Phones and Tablets |      mrec       |
 
 ### Adaptive Banners
 Adaptive banners are the next generation of responsive ads, maximizing performance by optimizing ad size for each device.  
 To pick the best ad size, adaptive banners use fixed aspect ratios instead of fixed heights. This results in banner ads that occupy a more consistent portion of the screen across devices and provide opportunities for improved performance. [You can read more in this article.](https://developers.google.com/admob/android/banner/adaptive)
-
-####AdSize constant of adaptive banner is `adaptive`.
+***
+- AdSize constant of adaptive banner is `adaptive`.
 
 ### Smart Banners
 Typically, Smart Banners on phones have a Standard Banner size. Or on tablets an IAB Leaderboard size.
-
-####AdSize constant of smart banner is `smart`.
+***
+- AdSize constant of smart banner is `smart`.
 
 </div>
 
