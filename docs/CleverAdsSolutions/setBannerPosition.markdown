@@ -4,7 +4,7 @@
 > __Type__              [Function][api.type.Function]
 > __Return value__      none
 > __Keywords__          ads, advertising, Clever Ads Solutions, CAS, setBannerPosition
-> __See also__          [cas.showBanner()][plugin.cas.isAdReady]
+> __See also__          [cas.showBanner()][plugin.cas.showBanner]
 >						[cas.*][plugin.cas]
 > --------------------- ------------------------------------------------------------------------------------------
 
@@ -23,10 +23,10 @@ Once you initialize the plugin with [cas.init()][cas.cas.init], `CAS SDK` will a
 
 ## Syntax
 
-    cas.setBannerPosition(bannerPositionId)
+    cas.setBannerPosition(bannerPosition)
 
-##### setBannerPosition ~^(required)^~
-_[Number][api.type.Number]._ The position banner id `(0 - Top Center, 1 - Top Left, 2 - Top Right, 3 - Bottom Center, 4 - Bottom Left, 5 - Bottom Right)`.
+##### bannerPosition ~^(required)^~
+_[String][api.type.String]._ The position of a banner: `"top_center"`, `"top_left"`, `"top_right"`, `"bottom_center"`, `"bottom_left"` or `"bottom_right"`.
 
 ## Example
 
@@ -45,10 +45,10 @@ end
 cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=false, appReturn=false } )
 
 -- Set banner position
-cas.setBannerPosition(1)
+cas.setBannerPosition("top_center")
 
 -- Sometime later, show an ad
-if ( cas.isAdReady( 0 ) ) then
+if ( cas.isBannerReady() ) then
 	cas.showBanner()
 end
 ``````

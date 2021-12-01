@@ -12,7 +12,7 @@
 
 [String][api.type.String] value indicating the phase of the [adsRequest][plugin.cas.event.adsRequest] event. Possible values include:
 
-* `"init"` &mdash; Indicates that the Clever Ads Solutions SDK was initialized successfully.
+* `"init"` &mdash; Indicates that the Clever Ads Solutions SDK was initialized or failed. For this phase, [event.isError][plugin.cas.event.adsRequest.isError] can be `true`.
 
 * `"adFailedToLoad"` &mdash; Indicates that an ad failed to load. For this phase, [event.isError][plugin.cas.event.adsRequest.isError] will be `true`. Additionally, [event.adType][plugin.cas.event.adsRequest.adType], and [event.response][plugin.cas.event.adsRequest.response] can provide additional context.
 

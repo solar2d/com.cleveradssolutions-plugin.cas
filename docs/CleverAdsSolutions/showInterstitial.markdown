@@ -4,7 +4,7 @@
 > __Type__              [Function][api.type.Function]
 > __Return value__      none
 > __Keywords__          ads, advertising, Clever Ads Solutions, CAS, showInterstitial
-> __See also__          [cas.isAdReady()][plugin.cas.isAdReady]
+> __See also__          [cas.isInterstitialReady()][plugin.cas.isInterstitialReady]
 >						[cas.*][plugin.cas]
 > --------------------- ------------------------------------------------------------------------------------------
 
@@ -40,8 +40,9 @@ end
 
 -- Initialize the CAS plugin
 cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=false, interstitial=true, rewarded=true, appReturn=false } )
+
 -- Sometime later, show an ad
-if ( cas.isAdReady( 1 ) ) then
+if ( cas.isInterstitialReady() ) then
 	cas.showInterstitial()
 end
 ``````

@@ -31,7 +31,11 @@ Before you can use this plugin, you must [register](https://cleveradssolutions.c
 
 #### [cas.setDebugMode()][plugin.cas.setDebugMode]
 
-#### [cas.isAdReady()][plugin.cas.isAdReady]
+#### [cas.isBannerReady()][plugin.cas.isBannerReady]
+
+#### [cas.isInterstitialReady()][plugin.cas.isInterstitialReady]
+
+#### [cas.isRewardedReady()][plugin.cas.isRewardedReady]
 
 #### [cas.setBannerSize()][plugin.cas.setBannerSize]
 
@@ -106,6 +110,7 @@ For Android, the following permissions/features are automatically added when usi
 
 Also, minimum Android API level required is 19
 
+</div>
 </div>
 
 
