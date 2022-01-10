@@ -3,6 +3,7 @@ on:
     paths:
       - 'plugins/**'
       - 'docs/**'
+  repository_dispatch:
   workflow_dispatch:
 
 jobs:
