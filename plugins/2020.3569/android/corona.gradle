@@ -10,5 +10,5 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.cleveradssolutions:cas:2.5.3'
+    implementation 'com.cleveradssolutions:cas:2.6.3'
 }
