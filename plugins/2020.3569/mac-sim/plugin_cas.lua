@@ -3,7 +3,7 @@
 local Library = require "CoronaLibrary"
 
 -- Create library
-local lib = Library:new{ name="plugin.cas", publisherId="com.cleveradssolution", version=5 }
+local lib = Library:new{ name="plugin.cas", publisherId="com.cleveradssolution", version=9 }
 
 -------------------------------------------------------------------------------
 -- BEGIN
@@ -65,6 +65,18 @@ end
 
 function lib.showRewarded()
     showWarning("cas.showRewarded()")
+end
+
+function lib.setUserConsent() 
+    showWarning("cas.setUserConsent")
+end 
+
+function lib.setCcpaStatus() 
+    showWarning("cas.setCcpaStatus")
+end
+
+function lib.setTaggedAudience()
+    showWarning("cas.setTaggedAudience")
 end
 
 -------------------------------------------------------------------------------
