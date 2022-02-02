@@ -48,13 +48,13 @@ _[Boolean][api.type.Boolean]._ Set this value to `true` to enable rewarded ads. 
 _[Boolean][api.type.Boolean]._ Set this value to `true` to enable AppReturn ads. Default is `false`.
 
 ##### userConsent ~^(optional)^~
-_[String][api.type.String]._ Reed more [here](/setUserConsent).
+_[String][api.type.String]._ Reed more [here](/docs/CleverAdsSolutions/setUserConsent.markdown).
 
 ##### ccpaStatus ~^(optional)^~
-_[String][api.type.String]._ Reed more [here](/setCcpaStatus).
+_[String][api.type.String]._ Reed more [here](/docs/CleverAdsSolutions/setCcpaStatus.markdown).
 
 ##### taggedAudience ~^(optional)^~
-_[String][api.type.String]._ Reed more [here](/setTaggedAudience).
+_[String][api.type.String]._ Reed more [here](/docs/CleverAdsSolutions/setTaggedAudience.markdown).
 
 ## Example
 
