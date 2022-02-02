@@ -47,6 +47,15 @@ _[Boolean][api.type.Boolean]._ Set this value to `true` to enable rewarded ads. 
 ##### appReturn ~^(optional)^~
 _[Boolean][api.type.Boolean]._ Set this value to `true` to enable AppReturn ads. Default is `false`.
 
+##### userConsent ~^(optional)^~
+_[String][api.type.String]._ Reed more [here](/docs/CleverAdsSolutions/setUserConsent.markdown).
+
+##### ccpaStatus ~^(optional)^~
+_[String][api.type.String]._ Reed more [here](/docs/CleverAdsSolutions/setCcpaStatus.markdown).
+
+##### taggedAudience ~^(optional)^~
+_[String][api.type.String]._ Reed more [here](/docs/CleverAdsSolutions/setTaggedAudience.markdown).
+
 ## Example
 
 ``````lua
@@ -60,6 +69,11 @@ local function adListener( event )
 	end
 end
 
--- Initialize the CAS plugin
+-- Initialize the CAS plugin (without optional values)
 cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=true, appReturn=false } )
+
+-- OR 
+
+-- Initialize the CAS plugin (with optional values)
+cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=true, appReturn=false, userConsent="accepted", ccpaStatus="opt_in_sale", taggedAudience="not_children" } )
 ``````

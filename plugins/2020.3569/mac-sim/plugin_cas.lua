@@ -3,7 +3,7 @@
 local Library = require "CoronaLibrary"
 
 -- Create library
-local lib = Library:new{ name="plugin.cas", publisherId="com.cleveradssolution", version=9 }
+local lib = Library:new{ name="plugin.cas", publisherId="com.cleveradssolution", version=10 }
 
 -------------------------------------------------------------------------------
 -- BEGIN
