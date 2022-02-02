@@ -31,7 +31,7 @@ When the user did not consent use:
 cas.setUserConsent("denied")
 ``````
 
-> We recommend to set Privacy API before initializing CAS SDK.
+> We recommend to set Privacy API as a parametr in initializing CAS SDK.
 
 </div>
 
@@ -52,15 +52,20 @@ local cas = require( "plugin.cas" )
 local function adListener( event )
 
 	if ( event.phase == "init" ) then  -- Successful initialization
+        -- Set user consent (not recommend)
+        cas.setUserConsent("accepted")   
+        
 		print( event.provider )
 	end
 end
 
--- Set user consent
-cas.setUserConsent("accepted")
-
 -- Initialize the CAS plugin
 cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=false, appReturn=false } )
+
+OR (recommend)
+
+-- Initialize the CAS plugin (not recommend)
+cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=false, appReturn=false, userConsent="accepted" } )
 
 end
 ``````

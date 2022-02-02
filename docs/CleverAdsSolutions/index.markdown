@@ -49,6 +49,12 @@ Before you can use this plugin, you must [register](https://cleveradssolutions.c
 
 #### [cas.showRewarded()][plugin.cas.showRewarded]
 
+#### [cas.setUserConsent()][plugin.cas.setUserConsent]
+
+#### [cas.setCcpaStatus()][plugin.cas.setCcpaStatus]
+
+#### [cas.setTaggedAudience()][plugin.cas.setTaggedAudience]
+
 ## Events
 
 #### [adsRequest][plugin.cas.event.adsRequest]
@@ -78,11 +84,11 @@ settings =
 <div class="guide-notebox-imp">
 <div class="notebox-title-imp">Important</div>
 
-1. Follow the [link](http://psvpromo.psvgamestudio.com/cas-settings.php) to download a cas_settings[own_id].json file and drop into the AndroidResources/res/raw/ folder of your project.
+1. Follow the [link](http://cleveradssolutions.com/) to download a cas_settings[own_id].json file and drop into the AndroidResources/res/raw/ folder of your project.
 
 `⚠️ [own_id] is not an identifier of the manager. You enter a manager ID to download settings file.`
 
-2. (If you use AdMob) Add AdMob App ID to your app's AndroidManifest.xml file by adding a <meta-data> tag with name com.google.android.gms.ads.APPLICATION_ID to your build.settings file, as shown below.
+
 For android:value insert AdMob App ID in quotes, as shown below.
 
 ``````lua
