@@ -33,7 +33,7 @@ When user has **opted-out** to the sale of their data use:
 cas.setCcpaStatus("opt_out_sale")
 ``````
 
-> We recommend to set Privacy API as a parametr in initializing CAS SDK.
+> We recommend to set Privacy API as a parametr in initializing CAS SDK or BEFORE initialization.
 
 </div>
 
@@ -54,17 +54,18 @@ local cas = require( "plugin.cas" )
 local function adListener( event )
 
 	if ( event.phase == "init" ) then  -- Successful initialization
-		-- Set ccpa value (not recommend)
-        cas.setCcpaStatus("opt_in_sale")
 	end
 end
 
+-- Set ccpa value
+cas.setCcpaStatus("opt_in_sale")
+        
 -- Initialize the CAS plugin
 cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=false, appReturn=false } )
 
-OR (recommend)
+OR 
 
--- Initialize the CAS plugin (not recommend)
+-- Initialize the CAS plugin 
 cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=false, appReturn=false, ccpaStatus="opt_in_sale" } )
 
 

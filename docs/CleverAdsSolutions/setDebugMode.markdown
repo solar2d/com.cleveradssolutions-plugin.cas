@@ -16,7 +16,7 @@ Set debug mode.
 <div class="guide-notebox">
 <div class="notebox-title">Note</div>
 
-Once you initialize the plugin with [cas.init()][cas.cas.init], `CAS SDK` will automatically start loading ads. You can set debug mode for gettings logs after inititalization.
+Once you initialize the plugin with [cas.init()][cas.cas.init], `CAS SDK` will automatically start loading ads. You can set debug mode for gettings logs.
 
 </div>
 
@@ -41,10 +41,11 @@ local function adListener( event )
 	end
 end
 
+-- Set debug mode 
+cas.setDebugMode(true)
+
 -- Initialize the CAS plugin
 cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=true, appReturn=false } )
 
--- Set debug mode 
-cas.setDebugMode(true)
 end
 ``````

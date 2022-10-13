@@ -32,7 +32,7 @@ To indicate that your content treated as **not** child-directed use:
 cas.setTaggedAudience("not_children")
 ``````
 
-> We recommend to set Privacy API as a parametr in initializing CAS SDK.
+> We recommend to set Privacy API as a parametr in initializing CAS SDK or BEFOR initialization.
 
 </div>
 
@@ -52,21 +52,20 @@ local cas = require( "plugin.cas" )
 -- CAS listener function
 local function adListener( event )
 
-	if ( event.phase == "init" ) then  -- Successful initialization
-        -- Set tagged audience (not recommend)
-        cas.setTaggedAudience("not_children")   
-        
+	if ( event.phase == "init" ) then  -- Successful initialization 
 		print( event.provider )
 	end
 end
 
-
+-- Set tagged audience
+cas.setTaggedAudience("not_children")  
+        
 -- Initialize the CAS plugin
 cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=false, appReturn=false } )
 
-OR (recommend)
+OR
 
--- Initialize the CAS plugin (not recommend)
+-- Initialize the CAS plugin
 cas.init( adListener, { managerId="YOUR_MANAGER_ID", testMode=true, banner=true, interstitial=false, rewarded=false, appReturn=false, taggedAudience="not_children" } )
 
 end
