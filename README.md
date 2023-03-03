@@ -3,7 +3,7 @@
 ```
 plugins = {
     ["plugin.cas"] = {
-        publisherId = "com.cleveradssolution",
+        publisherId = "com.cleveradssolutions",
     },
 },
 ```
