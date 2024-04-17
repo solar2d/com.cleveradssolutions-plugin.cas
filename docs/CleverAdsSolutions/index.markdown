@@ -69,7 +69,7 @@ settings =
 {
 	android =
 	{
-		minSdkVersion = "19",
+		minSdkVersion = "21",
 	},
 	plugins =
 	{
@@ -84,7 +84,7 @@ settings =
 <div class="guide-notebox-imp">
 <div class="notebox-title-imp">Important</div>
 
-1. Follow the [link](http://cleveradssolutions.com/) to download a cas_settings[own_id].json file and drop into the AndroidResources/res/raw/ folder of your project.
+1. Follow the [link](http://cas.ai/) to download a cas_settings[own_id].json file and drop into the AndroidResources/res/raw/ folder of your project.
 
 `⚠️ [own_id] is not an identifier of the manager. You enter a manager ID to download settings file.`
 
@@ -101,7 +101,7 @@ android =
                     android:value="ca-app-pub-3940256099942544~3347511713"/>  -- replace with your app id. See: https://goo.gl/fQ2neu
             ]],
         },
-		minSdkVersion = "19",
+		minSdkVersion = "21",
 	},
 
 ``````
@@ -114,7 +114,7 @@ For Android, the following permissions/features are automatically added when usi
 * `"android.permission.INTERNET"`
 * `"android.permission.ACCESS_NETWORK_STATE"`
 
-Also, minimum Android API level required is 19
+Also, minimum Android API level required is 21
 
 </div>
 </div>
