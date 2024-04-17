@@ -6,9 +6,9 @@ repositories {
     maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" } //Mintegral
     maven { url "https://artifact.bytedance.com/repository/pangle" } //Pangle
     maven { url "https://s3.amazonaws.com/smaato-sdk-releases/" } // Smaato
-    maven { url "https://sdk.tapjoy.com/" } //TapJoy
+    maven { url "https://cboost.jfrog.io/artifactory/chartboost-ads/" } //Chartboost
 }
 
 dependencies {
-    implementation 'com.cleveradssolutions:cas:2.9.3'
+    implementation 'com.cleveradssolutions:cas:3.6.1'
 }
